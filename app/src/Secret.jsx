@@ -38,7 +38,7 @@ function Secret() {
   const navigate = useNavigate();
 
   const Clicked = (id) => {
-    navigate(`/game/${id}`);
+    navigate(`/learn/${id}`);
   };
 
   return (
