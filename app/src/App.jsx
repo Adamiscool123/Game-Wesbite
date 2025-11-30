@@ -50,12 +50,21 @@ function Home() {
 }
 
 function App() {
-  const [isAuthed, setIsAuthed] = useState(false);
+  const [isAuthed, setIsAuthed] = useState(() => {
+    return localStorage.getItem("authed") === "true";
+  });
 
   const authValue = useMemo(
     () => ({
       isAuthed,
-      login: () => setIsAuthed(true),
+      login: () => {
+        setIsAuthed(true);
+        localStorage.setItem("authed", "true");
+      },
+      logout: () => {
+        setIsAuthed(false);
+        localStorage.removeItem("authed");
+      },
     }),
     [isAuthed]
   );
