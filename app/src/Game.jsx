@@ -7,17 +7,30 @@ const containerStyle = {
   alignItems: "flex-start",
   gap: "16px",
   padding: "16px",
+  flexWrap: "wrap",
 };
 
 const frameWrap = {
-  flex: "1 1 900px",
+  flex: "3 1 320px",
   display: "flex",
   justifyContent: "center",
+  width: "100%",
+};
+
+const iframeStyle = {
+  width: "100%",
+  maxWidth: "900px",
+  height: "800px",
+  minHeight: "500px",
+  aspectRatio: "16 / 9",
+  border: "none",
 };
 
 const adColumn = {
-  width: "180px",
+  flex: "1 1 160px",
   minWidth: "140px",
+  width: "100%",
+  maxWidth: "200px",
 };
 
 const adStyle = {
@@ -27,14 +40,14 @@ const adStyle = {
 };
 
 const games = [
-  <iframe src="https://html5.gamedistribution.com/d3f1005739584e1294bc7474ce166340/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/70ba0334471c4a79b6e82c17f194f8f3/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/5dff4319bd2845c781cd3378d86735ed/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/31b35af873d245a6855c4a5e7b9f7efb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/bf1268dccb5d43e7970bb3edaa54afc8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/72b219a0450c465c81f3cd1ebdafb815/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/c5d8e68694434595a8a2c367bc3a4fdb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/e5dcbebf386c46899035f042f40982d5/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameBorder="0"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/d3f1005739584e1294bc7474ce166340/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/70ba0334471c4a79b6e82c17f194f8f3/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/5dff4319bd2845c781cd3378d86735ed/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/31b35af873d245a6855c4a5e7b9f7efb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/bf1268dccb5d43e7970bb3edaa54afc8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/72b219a0450c465c81f3cd1ebdafb815/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/c5d8e68694434595a8a2c367bc3a4fdb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/e5dcbebf386c46899035f042f40982d5/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
 ];
 
 const AdSlot = () => {

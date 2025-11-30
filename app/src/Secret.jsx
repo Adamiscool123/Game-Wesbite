@@ -3,16 +3,15 @@ import { useNavigate } from "react-router-dom";
 import "../public/Hmm.css";
 
 const body = {
-    display: "grid",
-
-    gridTemplateColumns: "auto auto auto auto",
-    
-    gap: "10px",
-}
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+  gap: "10px",
+};
 
 const size = {
-    width: "100%",
-    height: "100%"
+  width: "100%",
+  height: "auto",
+  objectFit: "cover",
 };
 
 const game_pictures = [
