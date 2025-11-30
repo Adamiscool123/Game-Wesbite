@@ -12,7 +12,9 @@ const games = [
     <iframe src="https://html5.gamedistribution.com/5dff4319bd2845c781cd3378d86735ed/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>,
     <iframe src="https://html5.gamedistribution.com/31b35af873d245a6855c4a5e7b9f7efb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>,
     <iframe src="https://html5.gamedistribution.com/bf1268dccb5d43e7970bb3edaa54afc8/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>,
-    <iframe src="https://html5.gamedistribution.com/72b219a0450c465c81f3cd1ebdafb815/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>
+    <iframe src="https://html5.gamedistribution.com/72b219a0450c465c81f3cd1ebdafb815/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>,
+    <iframe src="https://html5.gamedistribution.com/c5d8e68694434595a8a2c367bc3a4fdb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>,
+    <iframe src="https://html5.gamedistribution.com/e5dcbebf386c46899035f042f40982d5/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="900px" height="815px" scrolling="none" frameborder="0"></iframe>
 ]
 
 function Game(){

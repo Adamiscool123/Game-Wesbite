@@ -22,6 +22,8 @@ const game_pictures = [
   "/Images/image5.jpg",
   "/Images/image6.jpg",
   "/Images/image7.jpg",
+  "/Images/image8.jpg",
+  "/Images/image9.jpg"
 ];
 
 const picture = {
