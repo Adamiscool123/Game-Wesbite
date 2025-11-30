@@ -19,7 +19,6 @@ const size = {
 const game_pictures = [
     "../Images/image1.jpg",
     "../Images/image2.jpg",
-    "../Images/image3.jpg",
     "../Images/image4.jpg",
     "../Images/image5.jpg",
     "../Images/image6.jpg",
