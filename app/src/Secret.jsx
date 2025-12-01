@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../public/Hmm.css";
+import "../public/Secret.css";
 
 const gallery = {
   display: "grid",
@@ -33,30 +33,22 @@ const game_pictures = [
   "/Images/image9.jpg",
   "/Images/image10.png",
   "/Images/image11.png",
-  "/Images/image12.jpg",
-  "/Images/image13.png",
-  "/Images/image14.png",
-  "/Images/image15.png",
-  "/Images/image16.jpg",
-  "/Images/image17.jpg",
 ];
-
-const heading = {
-  color: "red",
-  textAlign: "center",
-  visibility: "visible"
-}
 
 function Secret() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.body.classList.add("secret-background");
+    return () => document.body.classList.remove("secret-background");
+  }, []);
 
   const Clicked = (id) => {
     navigate(`/learn/${id}`);
   };
 
   return (
-    <div>
-      <h1 style={heading}>Games are temporarily offline due to some issues, but we are actively working to fix it</h1>
+    <div className="secret-page">
       <ul style={gallery}>
         {game_pictures.map((item, index) => (
           <li key={index} style={listItem} onClick={() => Clicked(index)}>

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Secret from "./Secret";
 import Game from "./Game";
+import "../public/Secret.css";
 
 const header = {
   textAlign: "center",
@@ -32,6 +33,11 @@ const h3 = {
 
 function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.body.classList.add("home-background");
+    return () => document.body.classList.remove("home-background");
+  }, []);
 
   const handleClick = () => {
     navigate("/maths");

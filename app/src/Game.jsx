@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../public/Secret.css";
 
 const containerStyle = {
   display: "flex",
@@ -48,14 +49,14 @@ const games = [
   <iframe src="https://html5.gamedistribution.com/72b219a0450c465c81f3cd1ebdafb815/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
   <iframe src="https://html5.gamedistribution.com/c5d8e68694434595a8a2c367bc3a4fdb/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
   <iframe src="https://html5.gamedistribution.com/e5dcbebf386c46899035f042f40982d5/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
-  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/9lpHai56Q"> </iframe>,
-  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/UYiznUAya"> </iframe>,
-  <iframe src="https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none" frameborder="0"></iframe>,
-  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/REwFeKcoN"> </iframe>,
-  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/Sy64_WbU"> </iframe>,
-  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/SyXuN7W1F"> </iframe>,
-  <iframe src="https://html5.gamedistribution.com/50a6ca30773345549c25cacc722305de/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none" frameborder="0"></iframe>,
-  <iframe src="https://html5.gamedistribution.com/d0c31b0603f24b43b33e4b93d13d64bf/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none" frameborder="0"></iframe>,
+  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/9lpHai56Q"> </iframe>,
+  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/UYiznUAya"> </iframe>,
+  <iframe src="https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/REwFeKcoN"> </iframe>,
+  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/Sy64_WbU"> </iframe>,
+  <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" style={iframeStyle} src="https://zv1y2i8p.play.gamezop.com/g/SyXuN7W1F"> </iframe>,
+  <iframe src="https://html5.gamedistribution.com/50a6ca30773345549c25cacc722305de/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
+  <iframe src="https://html5.gamedistribution.com/d0c31b0603f24b43b33e4b93d13d64bf/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" style={iframeStyle} scrolling="none"></iframe>,
 ];
 
 const AdSlot = () => {
@@ -83,6 +84,11 @@ function Game() {
   const { id } = useParams();
   const game_index = Number(id);
   const game = games[game_index];
+
+  useEffect(() => {
+    document.body.classList.add("game-background");
+    return () => document.body.classList.remove("game-background");
+  }, []);
 
   useEffect(() => {
     const existing = document.querySelector(
