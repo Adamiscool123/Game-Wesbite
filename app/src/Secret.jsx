@@ -41,6 +41,12 @@ const game_pictures = [
   "/Images/image17.jpg",
 ];
 
+const heading = {
+  color: "red",
+  textAlign: "center",
+  visibility: "visible"
+}
+
 function Secret() {
   const navigate = useNavigate();
 
@@ -49,13 +55,16 @@ function Secret() {
   };
 
   return (
-    <ul style={gallery}>
-      {game_pictures.map((item, index) => (
-        <li key={index} style={listItem} onClick={() => Clicked(index)}>
-          <img src={item} style={size} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h1 style={heading}>Games are temporarily offline due to some issues, but we are actively working to fix it</h1>
+      <ul style={gallery}>
+        {game_pictures.map((item, index) => (
+          <li key={index} style={listItem} onClick={() => Clicked(index)}>
+            <img src={item} style={size} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
