@@ -1,0 +1,21 @@
+{
+  "name": "html5-asteroids",
+  "version": "1.0.0",
+  "description": "HTML5-Asteroids\r ===============",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmcinnes/HTML5-Asteroids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dmcinnes/HTML5-Asteroids/issues"
+  },
+  "homepage": "https://github.com/dmcinnes/HTML5-Asteroids#readme"
+}

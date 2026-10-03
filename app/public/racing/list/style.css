@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(64, 62, 62);
+}
+
+.title{
+    text-align: center;
+}
+
+.list-item{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
