@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Secret from "./Secret";
-import Game from "./Game";
 import "../public/Secret.css";
 
 const header = {
@@ -188,7 +187,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/maths" element={<Secret />} />
-      <Route path="/learn/:id" element={<Game />} />
     </Routes>
   );
 }

@@ -1,0 +1,84 @@
+.site-body {
+  --bg: #1c1e23;
+  --surface: #25282f;
+  --surface-hover: #2c3038;
+  --border: #353a43;
+  --text: #e6e8ec;
+  --muted: #a4abb6;
+  --accent: #8fb0e8;
+
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.site-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+.site-page h1 {
+  margin: 0 0 28px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.card:hover,
+.card:focus-visible {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
