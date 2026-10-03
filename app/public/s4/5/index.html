@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SNG850F0J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-9SNG850F0J");
+</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="wg">
+            <header class="wg-top">
+                <a href="../index.html" class="wg-back">← Puzzles</a>
+                <h1>Word Guess</h1>
+                <span id="stats" class="wg-stats"></span>
+            </header>
+            <div id="board" class="wg-board" aria-label="Guesses"></div>
+            <div class="wg-status">
+                <p id="message" class="wg-message" role="status" aria-live="polite"></p>
+                <button id="new" class="wg-new" type="button" hidden>New word</button>
+            </div>
+            <div id="keyboard" class="wg-keyboard"></div>
+        </main>
+        <script src="words.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>

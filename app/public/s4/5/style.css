@@ -1,0 +1,177 @@
+:root {
+  --bg: #1c1e23;
+  --border: #353a43;
+  --filled: #5a606b;
+  --text: #e6e8ec;
+  --muted: #a4abb6;
+  --accent: #8fb0e8;
+  --key: #444a54;
+  --correct: #4c8c58;
+  --present: #b38f2b;
+  --absent: #3e434c;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wg {
+  box-sizing: border-box;
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.wg-top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.wg-back {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.wg-back:hover {
+  color: var(--text);
+}
+
+.wg-top h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.wg-stats {
+  justify-self: end;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.wg-board {
+  display: grid;
+  gap: 6px;
+}
+
+.wg-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.wg-tile {
+  box-sizing: border-box;
+  width: min(58px, calc((100vw - 56px) / 5), calc((100vh - 370px) / 6));
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.wg-tile.filled {
+  border-color: var(--filled);
+}
+
+.wg-tile.correct,
+.wg-key.correct {
+  background: var(--correct);
+  border-color: var(--correct);
+  color: #fff;
+}
+
+.wg-tile.present,
+.wg-key.present {
+  background: var(--present);
+  border-color: var(--present);
+  color: #fff;
+}
+
+.wg-tile.absent {
+  background: var(--absent);
+  border-color: var(--absent);
+}
+
+.wg-status {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wg-message {
+  margin: 0;
+  text-align: center;
+}
+
+.wg-new {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wg-keyboard {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wg-krow {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.wg-key {
+  flex: 1;
+  max-width: 44px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: var(--key);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.wg-key.wide {
+  flex: 1.5;
+  max-width: 68px;
+  font-size: 0.8rem;
+}
+
+.wg-key.absent {
+  background: #2a2d33;
+  color: #6b717c;
+}
