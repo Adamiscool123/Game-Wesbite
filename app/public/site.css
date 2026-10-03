@@ -82,3 +82,8 @@
   font-weight: 600;
   color: var(--accent);
 }
+
+.card p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}

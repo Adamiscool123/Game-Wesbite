@@ -856,9 +856,7 @@
          */
         setArcadeModeContainerScale() {
             const windowHeight = window.innerHeight;
-            const scaleHeight = windowHeight / this.dimensions.HEIGHT;
-            const scaleWidth = window.innerWidth / this.dimensions.WIDTH;
-            const scale = Math.max(1, Math.min(scaleHeight, scaleWidth));
+            const scale = 1;
             const scaledCanvasHeight = this.dimensions.HEIGHT * scale;
             // Positions the game container at 10% of the available vertical window
             // height minus the game container height.
